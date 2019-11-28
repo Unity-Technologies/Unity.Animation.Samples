@@ -6,7 +6,7 @@ You will find a brief explanation of each sample [here](UnityAnimationHDRPExampl
 
 The AnimationCurves live in a different assembly. You can read more [here](UnityAnimationHDRPExamples/Assets/Scenes/AnimationCurve/README.md) about the provided example.
 
-# Disclaimer
+## Disclaimer
 
 DOTS animation package is highly experimental. We want you to know it's there, we invite you to peek at it and consider what it might mean for you and the future of Unity. What we don't want you to do is to rely on it as if it's something ready for professional production.
 - Will work on 2019.3b11 and up
