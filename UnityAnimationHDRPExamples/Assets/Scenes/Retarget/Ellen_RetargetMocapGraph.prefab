@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5433129889601784264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5433129889601784270}
+  - component: {fileID: 5433129889601784271}
+  m_Layer: 0
+  m_Name: Ellen_RetargetMocapGraph
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5433129889601784270
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5433129889601784264}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.1930196, y: -1.5949663, z: -4.750998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5433129889601784271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5433129889601784264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c90be4c42cfc112408f252f93b7b7dcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SourceRigPrefab: {fileID: 4803357220535733052, guid: 29c38e8053912424597ed88f2c2e9b58,
+    type: 3}
+  SourceClip: {fileID: 7400000, guid: cf2fac1554620489da248c47b27295a3, type: 3}
+  RetargetMap:
+  - Hips Ellen_Hips TR
+  - LeftUpperLeg Ellen_Left_UpperLeg R
+  - LeftLowerLeg Ellen_Left_LowerLeg R
+  - LeftFoot Ellen_Left_Foot R
+  - LeftToes Ellen_Left_Toes R
+  - RightUpperLeg Ellen_Right_UpperLeg R
+  - RightLowerLeg Ellen_Right_LowerLeg R
+  - RightFoot Ellen_Right_Foot R
+  - Spine Ellen_Spine R
+  - Chest Ellen_Chest R
+  - UpperChest Ellen_UpperChest R
+  - Neck Ellen_Neck R
+  - Head Ellen_Head R
+  - LeftShoulder Ellen_Left_Shoulder R
+  - LeftUpperArm Ellen_Left_UpperArm R
+  - LeftLowerArm Ellen_Left_Arm R
+  - LeftHand Ellen_Left_Hand R
+  - RightShoulder Ellen_Right_Shoulder R
+  - RightUpperArm Ellen_Right_UpperArm R
+  - RightLowerArm Ellen_Right_Arm R
+  - RightHand Ellen_Right_Hand R

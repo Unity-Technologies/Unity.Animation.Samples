@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3395002652139953327
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8960361996398180411}
+  - component: {fileID: -208535775157845907}
+  m_Layer: 0
+  m_Name: AnimationControllerGraph
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8960361996398180411
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3395002652139953327}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-208535775157845907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3395002652139953327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2022091dd8bdacc409481ea8e4fb9a05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WalkShortLeftClip: {fileID: 7400000, guid: 4597c41662b994404a23a025c1e19d17, type: 2}
+  WalkLongLeftClip: {fileID: 7400000, guid: 3c8da6ac4b9014a7193c7d35a884f010, type: 2}
+  WalkStraightClip: {fileID: 7400000, guid: 497c76d876ab2df45b41ef49f8eb6f1e, type: 3}
+  WalkLongRightClip: {fileID: 7400000, guid: d5a54c25c81444180aea7594edf76be7, type: 2}
+  WalkShortRightClip: {fileID: 7400000, guid: 13c1e8a88c549467c9c0eda118bf2e3b, type: 2}
+  JogShortLeftClip: {fileID: 7400000, guid: 1912e6d4cc0bc4ada9bd229eb28bcf93, type: 2}
+  JogLongLeftClip: {fileID: 7400000, guid: 0c5aa1b34912f458bbdf33c03689d3f5, type: 2}
+  JogStraightClip: {fileID: 7400002, guid: 497c76d876ab2df45b41ef49f8eb6f1e, type: 3}
+  JogLongRightClip: {fileID: 7400000, guid: f130b1681a29f466dbfa869fef34efe7, type: 2}
+  JogShortRightClip: {fileID: 7400000, guid: 013993a351ec8428f8a793bd69a6b705, type: 2}
+  MotionName: Hips
+  Bake: 1
+  SampleRate: 60
+  LoopValues: 1
+  BankPivot: 1
