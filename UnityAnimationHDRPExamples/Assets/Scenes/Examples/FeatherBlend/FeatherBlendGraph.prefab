@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &57547969964984637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6045176510356867513}
+  - component: {fileID: 858190556377563298}
+  m_Layer: 0
+  m_Name: FeatherBlendGraph
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6045176510356867513
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57547969964984637}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &858190556377563298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57547969964984637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ec33f37c4e9ebb41b1c8b9799fffd68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Clip1: {fileID: 7400000, guid: e075d65dab4aa054c80f74d2e86c969d, type: 2}
+  Clip2: {fileID: 7400000, guid: f42ada272ed894562aa815413e9976ce, type: 2}
+  DefaultWeight: 0
+  Blends:
+  - Id: LeftUpperLeg
+    Weight: 1
+  - Id: LeftLowerLeg
+    Weight: 1
+  - Id: LeftFoot
+    Weight: 1
+  - Id: LeftToes
+    Weight: 1
+  - Id: LeftToesEnd
+    Weight: 1
+  - Id: RightUpperLeg
+    Weight: 1
+  - Id: RightLowerLeg
+    Weight: 1
+  - Id: RightFoot
+    Weight: 1
+  - Id: RightToes
+    Weight: 1
+  - Id: RightToesEnd
+    Weight: 1
+  - Id: Hips
+    Weight: 1
+  - Id: Neck
+    Weight: 0.2
+  - Id: Head
+    Weight: 0.2
+  - Id: LeftShoulder
+    Weight: 0.5
+  - Id: LeftUpperArm
+    Weight: 0.5
+  - Id: LeftLowerArm
+    Weight: 0.5
+  - Id: LeftHand
+    Weight: 0.5

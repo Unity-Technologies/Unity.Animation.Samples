@@ -1,0 +1,6 @@
+{
+    "BuildSteps": [
+        "GlobalObjectId_V1-1-b08acfa97ea29e84597342a6a2afa6b2-93214019566545601-0"
+    ],
+    "RunStep": "Unity.Build.Common.RunStepDesktop, Unity.Build.Common"
+}

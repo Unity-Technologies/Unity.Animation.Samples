@@ -48,13 +48,15 @@ To make your own sample:
 
 The samples are independent one from another and are here to illustrate one possible way of implementing some animation features.
 
-* [**Animation Controller**](Assets/Scenes/AnimationController/README.md) Uses directional input to control the speed and direction of a walking character. Also shows a hybrid implementation of a follow behaviour for the camera.
-* [**BlendTree1D**](Assets/Scenes/BlendTree1D/README.md) Converts a 1D blend tree to control the direction of a character running.
-* [**BlendTree2DSimpleDirection**](Assets/Scenes/BlendTree2DSimpleDirection/README.md) Converts a 2D simple directional blend tree to control if a character moves forward/backward and to the left/right.
-* [**ClipLoopPlayer**](Assets/Scenes/ClipLoopPlayer/README.md) Plays a clip in loop.
-* [**ConfigurableClip**](Assets/Scenes/ConfigurableClip/README.md) Evaluates a clip at a certain time. You can configure the clip to use normalized time, to loop the time, to loop the transform and to use root motion. You can go forward and back in time for the evaluation using the right and left keys respectively.
-* [**Retarget**](Assets/Scenes/Retarget/README.md) Maps the transforms of a rig on another rig and plays a clip.
-* [**TwoClipsAndMixer**](Assets/Scenes/TwoClipsAndMixer/README.md) Uses a random blend factor to mix two clips.
+* [**Animation Controller**](Assets/Scenes/Examples/AnimationController/README.md) Uses directional input to control the speed and direction of a walking character. Also shows a hybrid implementation of a follow behaviour for the camera.
+* [**BlendTree1D**](Assets/Scenes/Examples/BlendTree1D/README.md) Converts a 1D blend tree to control the direction of a character running.
+* [**BlendTree2DSimpleDirection**](Assets/Scenes/Examples/BlendTree2DSimpleDirection/README.md) Converts a 2D simple directional blend tree to control if a character moves forward/backward and to the left/right.
+* [**ClipLoopPlayer**](Assets/Scenes/Examples/ClipLoopPlayer/README.md) Plays a clip in loop.
+* [**ConfigurableClip**](Assets/Scenes/Examples/ConfigurableClip/README.md) Evaluates a clip at a certain time. You can configure the clip to use normalized time, to loop the time, to loop the transform and to use root motion. You can go forward and back in time for the evaluation using the right and left keys respectively.
+* [**Retarget**](Assets/Scenes/Examples/Retarget/README.md) Maps the transforms of a rig on another rig and plays a clip.
+* [**PerformanceSingleClip**](Assets/Scenes/StressTests/PerformanceSingleClip/README.md) Uses single clip to animate a character (using randomized clip speed).
+* [**PerformanceTwoClipsAndMixer**](Assets/Scenes/StressTests/PerformanceTwoClipsAndMixer/README.md) Mixes two clips using a binary mixer to animate a character (uses randomized clip speeds and mixer weight).
+* [**PerformanceNClipsAndNMixer**](Assets/Scenes/StressTests/PerformanceNClipsAndNMixer/README.md) Mixes N clips using an N-Mixer to animate a character (uses randomized clip speeds and mixer weights).
 
 
 # Requirements

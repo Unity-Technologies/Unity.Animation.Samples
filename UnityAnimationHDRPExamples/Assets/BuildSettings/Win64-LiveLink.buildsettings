@@ -6,8 +6,7 @@
         "$type": "Unity.Build.Common.ClassicBuildProfile, Unity.Build.Common",
         "Target": 19,
         "Configuration": 2,
-        "Pipeline": "GlobalObjectId_V1-3-c190c05bb496e45f4a3084f6227b48b5-11400000-0",
-        "OutputPath": "Builds/Win64LiveLink",
+        "Pipeline": "GlobalObjectId_V1-1-b9a325ffa9c6f024cb1086a2e1e01d42-93214019566545601-0",
         "ExcludedAssemblies": []
     }]
 }

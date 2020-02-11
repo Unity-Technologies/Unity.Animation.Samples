@@ -1,5 +1,4 @@
 ﻿using Unity.Entities;
-using Unity.Animation;
 using Unity.Animation.Hybrid;
 using Unity.Mathematics;
 using Unity.Transforms;
@@ -40,7 +39,6 @@ public class Spawner : MonoBehaviour, IDeclareReferencedPrefabs, IConvertGameObj
         if (rigPrefab == Entity.Null)
             throw new Exception($"Something went wrong while creating an Entity for the rig prefab: {RigPrefab.name}");
 
-
         if (GraphPrefab != null)
         {
             var rigComponent = RigPrefab.GetComponent<RigComponent>();
@@ -71,15 +69,6 @@ public class RigSpawnerSystem : ComponentSystem
     {
         Entities.ForEach((Entity e, ref RigSpawner spawner) =>
         {
-            if (EntityManager.HasComponent<RigDefinitionSetup>(spawner.RigPrefab))
-            {
-                var rigDefinition = EntityManager.GetComponentData<RigDefinitionSetup>(spawner.RigPrefab);
-                if (!rigDefinition.Value.IsCreated)
-                    throw new System.ObjectDisposedException("RigDefinition is not Created");
-
-                RigEntityBuilder.SetupRigEntity(spawner.RigPrefab, EntityManager, rigDefinition.Value);
-            }
-
             for (var x = 0; x < spawner.CountX; x++)
             {
                 for (var y = 0; y < spawner.CountY; ++y)

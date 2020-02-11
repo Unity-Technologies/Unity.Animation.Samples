@@ -1,7 +1,7 @@
 ﻿using Unity.Entities;
 using Unity.Animation;
 
-[UpdateInGroup(typeof(AnimationSystemGroup))]
+[UpdateInGroup(typeof(PostAnimationSystemGroup))]
 [UpdateAfter(typeof(RigComputeMatricesSystem))]
 public class BoneRendererSystemGroup : ComponentSystemGroup
 {
