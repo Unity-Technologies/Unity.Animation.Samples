@@ -4,7 +4,7 @@ This repository contains projects that showcase the new DOTS animation package (
 
 You will find a brief explanation of each sample [here](UnityAnimationHDRPExamples/README.md).
 
-The AnimationCurves live in a different assembly. You can read more [here](UnityAnimationHDRPExamples/Assets/Scenes/AnimationCurve/README.md) about the provided example.
+The AnimationCurves live in a different assembly. You can read more [here](UnityAnimationHDRPExamples/Assets/Scenes/Examples/AnimationCurve/README.md) about the provided example.
 
 ## Disclaimer
 
