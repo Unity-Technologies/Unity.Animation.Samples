@@ -400,7 +400,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3965685608614339780}
   - component: {fileID: 3965685608617161846}
-  - component: {fileID: 5673370204372923601}
   m_Layer: 0
   m_Name: Geom_Helmet_Glass_LOD0
   m_TagString: Untagged
@@ -474,20 +473,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 0.07338965, z: 0.055576473}
     m_Extent: {x: 0.09814, y: 0.15945303, z: 0.1316975}
   m_DirtyAABB: 0
---- !u!114 &5673370204372923601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3965685608614049828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e62f6a0e6fcc05c44a28697da6a422a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Rig: {fileID: 3242001469682901077}
-  SkinnedMeshRenderer: {fileID: 3965685608617161846}
 --- !u!1 &3965685608614049830
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,7 +483,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3965685608614339782}
   - component: {fileID: 3965685608617161840}
-  - component: {fileID: 2261439395805527694}
   m_Layer: 0
   m_Name: Geom_Helmet_Beehive_LOD0
   m_TagString: Untagged
@@ -572,20 +556,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.0020606667, y: 0.09691614, z: 0.04506315}
     m_Extent: {x: 0.108774014, y: 0.17505437, z: 0.1218947}
   m_DirtyAABB: 0
---- !u!114 &2261439395805527694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3965685608614049830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e62f6a0e6fcc05c44a28697da6a422a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Rig: {fileID: 3242001469682901077}
-  SkinnedMeshRenderer: {fileID: 3965685608617161840}
 --- !u!1 &3965685608614049834
 GameObject:
   m_ObjectHideFlags: 0
@@ -596,7 +566,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3965685608614339786}
   - component: {fileID: 3965685608617161844}
-  - component: {fileID: 5046111675665102753}
   m_Layer: 0
   m_Name: Geom_Neck_LOD0
   m_TagString: Untagged
@@ -675,20 +644,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 0.40534455, z: -0.03507622}
     m_Extent: {x: 0.122552, y: 0.23161285, z: 0.12390022}
   m_DirtyAABB: 0
---- !u!114 &5046111675665102753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3965685608614049834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e62f6a0e6fcc05c44a28697da6a422a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Rig: {fileID: 3242001469682901077}
-  SkinnedMeshRenderer: {fileID: 3965685608617161844}
 --- !u!1 &3965685608614049836
 GameObject:
   m_ObjectHideFlags: 0
@@ -729,7 +684,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3965685608614339792}
   - component: {fileID: 3965685608617161730}
-  - component: {fileID: 700169986934554435}
   m_Layer: 0
   m_Name: Geom_Body_LOD0
   m_TagString: Untagged
@@ -880,20 +834,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: -0.44710073, z: 0.18930416}
     m_Extent: {x: 0.5206149, y: 0.8015382, z: 0.3369205}
   m_DirtyAABB: 0
---- !u!114 &700169986934554435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3965685608614049840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e62f6a0e6fcc05c44a28697da6a422a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Rig: {fileID: 3242001469682901077}
-  SkinnedMeshRenderer: {fileID: 3965685608617161730}
 --- !u!1 &3965685608614049842
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,7 +844,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3965685608614339794}
   - component: {fileID: 3965685608617161756}
-  - component: {fileID: 5765574564565729946}
   m_Layer: 0
   m_Name: Geom_Backpack_LOD0
   m_TagString: Untagged
@@ -979,20 +918,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 0.009578526, z: -0.073698714}
     m_Extent: {x: 0.159028, y: 0.1599825, z: 0.107058}
   m_DirtyAABB: 0
---- !u!114 &5765574564565729946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3965685608614049842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e62f6a0e6fcc05c44a28697da6a422a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Rig: {fileID: 3242001469682901077}
-  SkinnedMeshRenderer: {fileID: 3965685608617161756}
 --- !u!1 &3965685608614049878
 GameObject:
   m_ObjectHideFlags: 0
@@ -2735,6 +2660,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3965685608614339828}
+  - component: {fileID: 9128941353179946239}
   m_Layer: 0
   m_Name: Backpack
   m_TagString: Untagged
@@ -2756,6 +2682,18 @@ Transform:
   m_Father: {fileID: 3965685608614339830}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9128941353179946239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3965685608614050004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24e71dfe142c3804292455a0ed49bfff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3965685608614050006
 GameObject:
   m_ObjectHideFlags: 0
@@ -2765,6 +2703,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3965685608614339830}
+  - component: {fileID: 5259700209114926701}
   m_Layer: 0
   m_Name: UpperChest
   m_TagString: Untagged
@@ -2790,6 +2729,18 @@ Transform:
   m_Father: {fileID: 3965685608614339900}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5259700209114926701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3965685608614050006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24e71dfe142c3804292455a0ed49bfff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3965685608614050008
 GameObject:
   m_ObjectHideFlags: 0
@@ -3480,6 +3431,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3965685608614339878}
+  - component: {fileID: 7585079862466934326}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -3508,6 +3460,18 @@ Transform:
   m_Father: {fileID: 3965685608614339934}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7585079862466934326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3965685608614050054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24e71dfe142c3804292455a0ed49bfff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3965685608614050056
 GameObject:
   m_ObjectHideFlags: 0
@@ -3730,6 +3694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aea18a9fecfd504ba1a9c0f8ebcb60a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 1
   Bones:
   - {fileID: 3965685608614339826}
   - {fileID: 3965685608614339816}
@@ -3862,6 +3827,17 @@ MonoBehaviour:
   - {fileID: 8278781660582157930}
   - {fileID: 3442519133804092559}
   - {fileID: 3965685608614339702}
+  m_ExcludeBones:
+  - {fileID: 3965685608614339872}
+  - {fileID: 3965685608614339822}
+  - {fileID: 3965685608614339794}
+  - {fileID: 3965685608614339792}
+  - {fileID: 2717781682111490509}
+  - {fileID: 3965685608614339782}
+  - {fileID: 3965685608614339780}
+  - {fileID: 3965685608614339786}
+  m_InvalidBones: []
+  m_SkeletonRootBone: {fileID: 3965685608614339826}
   TranslationChannels: []
   RotationChannels: []
   ScaleChannels: []

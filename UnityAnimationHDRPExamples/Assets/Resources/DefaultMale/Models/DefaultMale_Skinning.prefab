@@ -1922,6 +1922,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3931961467685690820}
+  - component: {fileID: 7726716284478041150}
+  - component: {fileID: 8640372153007649909}
   m_Layer: 0
   m_Name: Hips
   m_TagString: Untagged
@@ -1946,6 +1948,30 @@ Transform:
   m_Father: {fileID: 3931961467685690434}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7726716284478041150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3931961467685454308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24e71dfe142c3804292455a0ed49bfff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8640372153007649909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3931961467685454308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c74113144ff30da4f894be7b64efbd67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3931961467685454310
 GameObject:
   m_ObjectHideFlags: 0
@@ -2023,6 +2049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aea18a9fecfd504ba1a9c0f8ebcb60a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 1
   Bones:
   - {fileID: 3931961467685690824}
   - {fileID: 3931961467685690828}
@@ -2100,6 +2127,9 @@ MonoBehaviour:
   - {fileID: 3931961467685690806}
   - {fileID: 3931961467685690456}
   - {fileID: 3931961467685690458}
+  m_ExcludeBones: []
+  m_InvalidBones: []
+  m_SkeletonRootBone: {fileID: 0}
   TranslationChannels: []
   RotationChannels: []
   ScaleChannels: []
@@ -2235,7 +2265,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3931961467685690828}
   - component: {fileID: 3931961467673955564}
-  - component: {fileID: 3931961467685454319}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -2272,6 +2301,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2369,20 +2399,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.117299676, y: -0.0041838065, z: -0.000000059604645}
     m_Extent: {x: 0.8884624, y: 0.18320969, z: 0.90526766}
   m_DirtyAABB: 0
---- !u!114 &3931961467685454319
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3931961467685454316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e62f6a0e6fcc05c44a28697da6a422a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Rig: {fileID: 3931961467685454315}
-  SkinnedMeshRenderer: {fileID: 3931961467673955564}
 --- !u!1 &3931961467685454318
 GameObject:
   m_ObjectHideFlags: 0

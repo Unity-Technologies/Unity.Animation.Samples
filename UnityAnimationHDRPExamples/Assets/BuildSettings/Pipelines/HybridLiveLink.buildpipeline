@@ -1,9 +1,0 @@
-{
-    "BuildSteps": [
-        "Unity.Build.Common.SaveScenesAndAssets, Unity.Build.Common",
-        "Unity.Build.Common.BuildStepApplyPlayerSettings, Unity.Build.Common",
-        "Unity.Build.Common.BuildStepSwitchPlatfomClassic, Unity.Build.Common",
-        "Unity.Build.Common.BuildStepBuildClassicLiveLink, Unity.Build.Common"
-    ],
-    "RunStep": "Unity.Build.Common.RunStepNotImplemented, Unity.Build.Common"
-}

@@ -1,19 +1,18 @@
-﻿using Unity.Entities;
+using Unity.Entities;
 using Unity.Animation;
 
-[UpdateInGroup(typeof(PostAnimationSystemGroup))]
-[UpdateAfter(typeof(RigComputeMatricesSystem))]
+[UpdateAfter(typeof(LateAnimationSystemGroup))]
 public class BoneRendererSystemGroup : ComponentSystemGroup
 {
 }
 
 [UpdateInGroup(typeof(BoneRendererSystemGroup))]
-public class BoneRendererMatrixSystem : BoneRendererMatrixSystemBase
+public class BoneRendererMatrixSystem : ComputeBoneRenderingMatricesBase
 {
 }
 
 [UpdateInGroup(typeof(BoneRendererSystemGroup))]
 [UpdateAfter(typeof(BoneRendererMatrixSystem))]
-public class BoneRendererRenderingSystem : BoneRendererRenderingSystemBase
+public class BoneRendererRenderingSystem : RenderBonesBase
 {
 }
