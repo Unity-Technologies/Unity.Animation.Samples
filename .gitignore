@@ -1,11 +1,15 @@
-UnityAnimation*Examples/Library/
-UnityAnimation*Examples/Temp/
-UnityAnimation*Examples/obj/
-UnityAnimation*Examples/Logs/
-UnityAnimation*Examples/.vscode/
-UnityAnimation*Examples/.vs
-UnityAnimation*Examples/Assets/Plugins/*
-UnityAnimation*Examples/Assets/Plugins.meta
+UnityAnimation*Examples/*
+
+!UnityAnimation*Examples/Assets/
+!UnityAnimation*Examples/Packages/
+!UnityAnimation*Examples/ProjectSettings/
+
+UnityAnimation*Examples/Assets/StreamingAssets/BlobAssets*
+UnityAnimation*Examples/Assets/StreamingAssets/TestResults.xml*
+UnityAnimation*Examples/Assets/StreamingAssets/PerformanceTestResults.json*
+UnityAnimation*Examples/Assets/EntityCache*
+UnityAnimation*Examples/Assets/StreamingAssets*
+UnityAnimation*Examples/Assets/SceneDependencyCache*
 
 *.user
 *.idea
@@ -42,22 +46,6 @@ Samples/Logs/*
 Bootstrap/
 
 BootstrapSamples/Logs/*
-
-UnityAnimation*Examples/Assets/StreamingAssets/BlobAssets
-UnityAnimation*Examples/Assets/StreamingAssets/BlobAssets.meta
-UnityAnimation*Examples/Assets/StreamingAssets/TestResults.xml
-UnityAnimation*Examples/Assets/StreamingAssets/PerformanceTestResults.json.meta
-UnityAnimation*Examples/Assets/StreamingAssets/PerformanceTestResults.json
-UnityAnimation*Examples/Assets/EntityCache
-UnityAnimation*Examples/Assets/EntityCache.meta
-UnityAnimation*Examples/Assets/StreamingAssets
-UnityAnimation*Examples/Assets/StreamingAssets.meta
-UnityAnimation*Examples/Assets/SceneDependencyCache
-UnityAnimation*Examples/Assets/SceneDependencyCache.meta
-UnityAnimation*Examples/Builds/*
-UnityAnimation*Examples/Build
-UnityAnimation*Examples/Build.meta
-UnityAnimation*Examples/UserSettings
 
 VersionControlSettings.asset
 

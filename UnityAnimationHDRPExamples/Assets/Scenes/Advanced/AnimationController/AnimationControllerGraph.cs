@@ -282,7 +282,7 @@ public class AnimationControllerDataInputNode
     [BurstCompile]
     struct Kernel : IGraphKernel<KernelData, KernelDefs>
     {
-        public void Execute(RenderContext ctx, KernelData data, ref KernelDefs ports)
+        public void Execute(RenderContext ctx, in KernelData data, ref KernelDefs ports)
         {
             var input = ctx.Resolve(ports.Input);
             ctx.Resolve(ref ports.MixerWalkJobBlend) = input.MixerWalkJobBlend;

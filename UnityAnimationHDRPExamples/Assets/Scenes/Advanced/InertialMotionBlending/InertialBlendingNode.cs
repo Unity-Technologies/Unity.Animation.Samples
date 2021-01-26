@@ -54,7 +54,7 @@ public class InertialBlendingNode
             ctx.UpdateKernelData(m_KernelData);
         }
 
-        public void HandleMessage(in MessageContext ctx, in Rig rig)
+        public void HandleMessage(MessageContext ctx, in Rig rig)
         {
             m_KernelData.Rig = rig;
 
@@ -84,7 +84,7 @@ public class InertialBlendingNode
             ctx.UpdateKernelData(m_KernelData);
         }
 
-        public void HandleMessage(in MessageContext ctx, in bool msg)
+        public void HandleMessage(MessageContext ctx, in bool msg)
         {
             var newClipSource = math.select(0, 1, msg);
             if (m_KernelData.ClipSource != newClipSource)
@@ -94,7 +94,7 @@ public class InertialBlendingNode
             ctx.UpdateKernelData(m_KernelData);
         }
 
-        public void HandleMessage(in MessageContext ctx, in float msg)
+        public void HandleMessage(MessageContext ctx, in float msg)
         {
             m_KernelData.Duration = msg;
             ctx.UpdateKernelData(m_KernelData);
@@ -129,7 +129,7 @@ public class InertialBlendingNode
             return blendRequested;
         }
 
-        public void Execute(RenderContext context, KernelData data, ref KernelDefs ports)
+        public void Execute(RenderContext context, in KernelData data, ref KernelDefs ports)
         {
             var blendRequested = ComputeIsBlendRequested(data);
 
