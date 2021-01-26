@@ -145,10 +145,10 @@ public class DirectionMixerNode
             ctx.Set.Destroy(m_ComputeWeightNode);
         }
 
-        public void HandleMessage(in MessageContext ctx, in Rig rig) =>
+        public void HandleMessage(MessageContext ctx, in Rig rig) =>
             ctx.EmitMessage(SimulationPorts.m_OutRig, rig);
 
-        public void HandleMessage(in MessageContext ctx, in BlobAssetReference<Clip> clip)
+        public void HandleMessage(MessageContext ctx, in BlobAssetReference<Clip> clip)
         {
             if (ctx.Port == SimulationPorts.Clip0)
             {
@@ -172,7 +172,7 @@ public class DirectionMixerNode
             }
         }
 
-        public void HandleMessage(in MessageContext ctx, in ClipConfiguration clipConfiguration) =>
+        public void HandleMessage(MessageContext ctx, in ClipConfiguration clipConfiguration) =>
             ctx.EmitMessage(SimulationPorts.m_OutConfiguration, clipConfiguration);
     }
 
@@ -183,7 +183,7 @@ public class DirectionMixerNode
     [BurstCompile]
     struct Kernel : IGraphKernel<KernelData, KernelDefs>
     {
-        public void Execute(RenderContext context, KernelData data, ref KernelDefs ports)
+        public void Execute(RenderContext context, in KernelData data, ref KernelDefs ports)
         {
         }
     }
@@ -208,7 +208,7 @@ public class DirectionMixerComputeWeightNode
     [BurstCompile]
     struct Kernel : IGraphKernel<KernelData, KernelDefs>
     {
-        public void Execute(RenderContext ctx, KernelData data, ref KernelDefs ports)
+        public void Execute(RenderContext ctx, in KernelData data, ref KernelDefs ports)
         {
             ctx.Resolve(ref ports.OutWeight0) = 0f;
             ctx.Resolve(ref ports.OutWeight1) = 0f;

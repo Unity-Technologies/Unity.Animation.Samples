@@ -49,6 +49,9 @@ public class RetargetComponent : MonoBehaviour, IConvertGameObjectToEntity, IDec
         List<RigTranslationOffset> translationOffsets = new List<RigTranslationOffset>();
         List<RigRotationOffset> rotationOffsets = new List<RigRotationOffset>();
 
+        quaternion srcRootRotInv = math.inverse(srcRig.transform.rotation);
+        quaternion destRootRotInv = math.inverse(dstRig.transform.rotation);
+
         for (var mapIter = 0; mapIter < retargetMap.Count; mapIter++)
         {
             bool success = false;
@@ -74,7 +77,11 @@ public class RetargetComponent : MonoBehaviour, IConvertGameObjectToEntity, IDec
 
                                     // heuristic that computes retarget scale based on translation node (ex: hips) height (assumed to be y)
                                     translationOffset.Scale = dstRig.Bones[dstBoneIter].position.y / srcRig.Bones[srcBoneIter].position.y;
-                                    translationOffset.Rotation = mathex.mul(math.conjugate(dstRig.Bones[dstBoneIter].parent.rotation), srcRig.Bones[srcBoneIter].parent.rotation);
+
+                                    quaternion dstParentRot = math.mul(destRootRotInv, dstRig.Bones[dstBoneIter].parent.rotation);
+                                    quaternion srcParentRot = math.mul(srcRootRotInv, srcRig.Bones[srcBoneIter].parent.rotation);
+
+                                    translationOffset.Rotation = mathex.mul(math.inverse(dstParentRot), srcParentRot);
 
                                     translationOffsets.Add(translationOffset);
                                     translationChannels.Add(new ChannelMap() { SourceId = srcPath, DestinationId = dstPath, OffsetIndex = translationOffsets.Count });
@@ -84,8 +91,14 @@ public class RetargetComponent : MonoBehaviour, IConvertGameObjectToEntity, IDec
                                 {
                                     var rotationOffset = new RigRotationOffset();
 
-                                    rotationOffset.PreRotation = mathex.mul(math.conjugate(dstRig.Bones[dstBoneIter].parent.rotation), srcRig.Bones[srcBoneIter].parent.rotation);
-                                    rotationOffset.PostRotation = mathex.mul(math.conjugate(srcRig.Bones[srcBoneIter].rotation), dstRig.Bones[dstBoneIter].rotation);
+                                    quaternion dstParentRot = math.mul(destRootRotInv, dstRig.Bones[dstBoneIter].parent.rotation);
+                                    quaternion srcParentRot = math.mul(srcRootRotInv, srcRig.Bones[srcBoneIter].parent.rotation);
+
+                                    quaternion dstRot = math.mul(destRootRotInv, dstRig.Bones[dstBoneIter].rotation);
+                                    quaternion srcRot = math.mul(srcRootRotInv, srcRig.Bones[srcBoneIter].rotation);
+
+                                    rotationOffset.PreRotation = mathex.mul(math.inverse(dstParentRot), srcParentRot);
+                                    rotationOffset.PostRotation = mathex.mul(math.inverse(srcRot), dstRot);
 
                                     rotationOffsets.Add(rotationOffset);
                                     rotationChannels.Add(new ChannelMap() { SourceId = srcPath, DestinationId = dstPath, OffsetIndex = rotationOffsets.Count });

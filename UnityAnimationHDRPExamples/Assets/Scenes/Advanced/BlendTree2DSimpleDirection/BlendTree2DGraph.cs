@@ -2,10 +2,10 @@ using Unity.Entities;
 using Unity.Animation;
 using Unity.DataFlowGraph;
 using Unity.Burst;
+using Unity.Animation.Hybrid;
 
 #if UNITY_EDITOR
 using UnityEditor.Animations;
-using Unity.Animation.Editor;
 
 public class BlendTree2DGraph : AnimationGraphBase
 {
@@ -120,7 +120,7 @@ public class ExtractBlendTree2DParametersNode
     [BurstCompile]
     struct Kernel : IGraphKernel<KernelData, KernelDefs>
     {
-        public void Execute(RenderContext ctx, KernelData data, ref KernelDefs ports)
+        public void Execute(RenderContext ctx, in KernelData data, ref KernelDefs ports)
         {
             ctx.Resolve(ref ports.OutParamX) = ctx.Resolve(ports.Input).paramX;
             ctx.Resolve(ref ports.OutParamY) = ctx.Resolve(ports.Input).paramY;

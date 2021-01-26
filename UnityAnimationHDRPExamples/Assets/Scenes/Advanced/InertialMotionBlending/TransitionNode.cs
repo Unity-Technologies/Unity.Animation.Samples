@@ -168,7 +168,7 @@ public class TransitionByBoolNode
                 set.Destroy(m_InertialBlendingNode);
         }
 
-        public void EmitAllOutMessages(in MessageContext ctx)
+        public void EmitAllOutMessages(MessageContext ctx)
         {
             ctx.EmitMessage(SimulationPorts.m_OutRig, m_Rig);
             ctx.EmitMessage(SimulationPorts.m_OutStreamSize, m_Rig.Value.Value.Bindings.StreamSize);
@@ -177,26 +177,26 @@ public class TransitionByBoolNode
             ctx.EmitMessage(SimulationPorts.m_OutBlendCurve, m_BlendCurve);
         }
 
-        public void HandleMessage(in MessageContext ctx, in Rig msg)
+        public void HandleMessage(MessageContext ctx, in Rig msg)
         {
             m_Rig = msg;
             ctx.EmitMessage(SimulationPorts.m_OutRig, m_Rig);
             ctx.EmitMessage(SimulationPorts.m_OutStreamSize, m_Rig.Value.Value.Bindings.StreamSize);
         }
 
-        public void HandleMessage(in MessageContext ctx, in float msg)
+        public void HandleMessage(MessageContext ctx, in float msg)
         {
             m_Duration = msg;
             ctx.EmitMessage(SimulationPorts.m_OutDuration, m_Duration);
         }
 
-        public void HandleMessage(in MessageContext ctx, in bool msg)
+        public void HandleMessage(MessageContext ctx, in bool msg)
         {
             m_ClipSelector = msg;
             ctx.EmitMessage(SimulationPorts.m_OutClipSource, m_ClipSelector);
         }
 
-        public void HandleMessage(in MessageContext ctx, in TransitionType msg)
+        public void HandleMessage(MessageContext ctx, in TransitionType msg)
         {
             if (m_TransitionType == msg)
                 return;
@@ -207,7 +207,7 @@ public class TransitionByBoolNode
             EmitAllOutMessages(ctx);
         }
 
-        public void HandleMessage(in MessageContext ctx, in BlobAssetReference<AnimationCurveBlob> msg)
+        public void HandleMessage(MessageContext ctx, in BlobAssetReference<AnimationCurveBlob> msg)
         {
             if (m_TransitionType == TransitionType.Crossfade)
             {
@@ -236,7 +236,7 @@ public class TransitionByBoolNode
 
     struct Kernel : IGraphKernel<KernelData, KernelDefs>
     {
-        public void Execute(RenderContext ctx, KernelData data, ref KernelDefs ports) {}
+        public void Execute(RenderContext ctx, in KernelData data, ref KernelDefs ports) {}
     }
 
     InputPortID ITaskPort<IRigContextHandler>.GetPort(NodeHandle handle) =>
@@ -280,13 +280,13 @@ public class WeightAccumulatorNode
             ctx.UpdateKernelData(RecalculateSpeed());
         }
 
-        public void HandleMessage(in MessageContext ctx, in float msg)
+        public void HandleMessage(MessageContext ctx, in float msg)
         {
             m_Duration = msg;
             ctx.UpdateKernelData(RecalculateSpeed());
         }
 
-        public void HandleMessage(in MessageContext ctx, in bool msg)
+        public void HandleMessage(MessageContext ctx, in bool msg)
         {
             m_Target = msg;
             ctx.UpdateKernelData(RecalculateSpeed());
@@ -303,7 +303,7 @@ public class WeightAccumulatorNode
 
     struct Kernel : IGraphKernel<KernelData, KernelDefs>
     {
-        public void Execute(RenderContext ctx, KernelData data, ref KernelDefs ports)
+        public void Execute(RenderContext ctx, in KernelData data, ref KernelDefs ports)
         {
             var deltaWeight = data.Speed * ctx.Resolve(ports.DeltaTime);
             ref var blendWeight = ref ctx.Resolve(ref ports.BlendWeight);

@@ -30,18 +30,24 @@ public class RemapSubRigPartComponent : MonoBehaviour, IConvertGameObjectToEntit
         overrides.AddTranslationOffsetOverride(binding, new RigTranslationOffset { Rotation = quaternion.identity, Scale = 1f, Space = RigRemapSpace.LocalToRoot });
         overrides.AddRotationOffsetOverride(binding, new RigRotationOffset { PreRotation = quaternion.identity, PostRotation = quaternion.identity, Space = RigRemapSpace.LocalToRoot });
 
+        var customHasher = new BindingHashGenerator
+        {
+            TransformBindingHashFunction = BindingHashGlobals.TransformBindingHashName,
+            GenericBindingHashFunction = BindingHashGlobals.GenericBindingHashName
+        };
+
         var setup = new RigRemapSetup
         {
             SrcClip = SourceClip.ToDenseClip(),
             SrcRig = srcRigDefinition.Value,
 
             // Automatically create a remap table based on matching rig component properties. This example uses two hierarchies that are
-            // different but have matching transform names. For this specific case, we use the BindingHashUtils.HashName delegate instead
-            // of the default HashFullPath strategy in order to find matching entries. Given we are remapping the srcRig (TerraFormerLOD1) to
+            // different but have matching transform names. For this specific case, we'll use a custom BindingHashGenerator (lines 33-37) to hash only transform names instead
+            // of the default hashing strategy to find matching entries. Given we are remapping the srcRig (TerraFormerLOD1) to
             // a sub rig part (HandRigLOD0) we override the remapping offsets of the RightHand transform to perform operations in
             // LocalToRoot space (lines 29-32) in order to displace the hand at the wanted position/rotation.
             RemapTable = Unity.Animation.Hybrid.RigRemapUtils.CreateRemapTable(
-                srcRigComponent, dstRigComponent, Unity.Animation.RigRemapUtils.ChannelFilter.All, overrides, BindingHashUtils.HashName
+                srcRigComponent, dstRigComponent, Unity.Animation.RigRemapUtils.ChannelFilter.All, overrides, customHasher
             )
         };
 

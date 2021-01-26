@@ -16,7 +16,7 @@ public class SynchronizeMotionTimerOnSyncTagsNode
 
     struct Data : INodeData, IMsgHandler<StringHash>, IMsgHandler<int>
     {
-        public void HandleMessage(in MessageContext ctx, in StringHash synchronizationTagType)
+        public void HandleMessage(MessageContext ctx, in StringHash synchronizationTagType)
         {
             ctx.UpdateKernelData(new KernelData
             {
@@ -24,7 +24,7 @@ public class SynchronizeMotionTimerOnSyncTagsNode
             });
         }
 
-        public void HandleMessage(in MessageContext ctx, in int motionCount)
+        public void HandleMessage(MessageContext ctx, in int motionCount)
         {
             ctx.Set.SetBufferSize(ctx.Handle, (OutputPortID)KernelPorts.SampleClipTimersOutput, Buffer<SampleClipTime>.SizeRequest(motionCount));
             ctx.Set.SetBufferSize(ctx.Handle, (OutputPortID)KernelPorts.Timers, Buffer<float>.SizeRequest(motionCount));
@@ -64,7 +64,7 @@ public class SynchronizeMotionTimerOnSyncTagsNode
             public float Ratio;
         }
 
-        public void Execute(RenderContext context, KernelData data, ref KernelDefs ports)
+        public void Execute(RenderContext context, in KernelData data, ref KernelDefs ports)
         {
             var weight = context.Resolve(ports.WeightComponent).Value;
             var deltaTime = context.Resolve(ports.DeltaTime);

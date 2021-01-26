@@ -15,7 +15,7 @@ namespace Unity.Animation
 
         struct Data : INodeData, IMsgHandler<int>
         {
-            public void HandleMessage(in MessageContext ctx, in int motionCount) =>
+            public void HandleMessage(MessageContext ctx, in int motionCount) =>
                 ctx.Set.SetBufferSize(ctx.Handle, (OutputPortID)KernelPorts.Weights, Buffer<float>.SizeRequest(motionCount));
         }
 
@@ -40,7 +40,7 @@ namespace Unity.Animation
         [BurstCompile /*(FloatMode = FloatMode.Fast)*/]
         struct Kernel : IGraphKernel<KernelData, KernelDefs>
         {
-            public void Execute(RenderContext context, KernelData data, ref KernelDefs ports)
+            public void Execute(RenderContext context, in KernelData data, ref KernelDefs ports)
             {
                 var normalizedTime = context.Resolve(ports.NormalizedTimeComponentInput);
                 var weight = context.Resolve(ports.WeightComponent).Value;

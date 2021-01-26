@@ -31,7 +31,7 @@ public class ConvertDeltaTimeToFloatNode : ConvertToBase<
     [BurstCompile]
     public struct Kernel : IGraphKernel<KernelData, KernelDefs>
     {
-        public void Execute(RenderContext ctx, KernelData data, ref KernelDefs ports) =>
+        public void Execute(RenderContext ctx, in KernelData data, ref KernelDefs ports) =>
             ctx.Resolve(ref ports.Output) = ctx.Resolve(ports.Input).Value;
     }
 }
